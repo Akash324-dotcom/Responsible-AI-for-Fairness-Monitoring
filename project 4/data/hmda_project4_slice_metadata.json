@@ -1,0 +1,54 @@
+{
+  "source": "Official CFPB/FFIEC HMDA Data Browser API",
+  "api_base_url": "https://ffiec.cfpb.gov/v2/data-browser-api/view/csv",
+  "download_urls": [
+    "https://ffiec.cfpb.gov/v2/data-browser-api/view/csv?states=CA&years=2022&actions_taken=1,2,3&loan_purposes=1",
+    "https://ffiec.cfpb.gov/v2/data-browser-api/view/csv?states=CA&years=2023&actions_taken=1,2,3&loan_purposes=1",
+    "https://ffiec.cfpb.gov/v2/data-browser-api/view/csv?states=CA&years=2024&actions_taken=1,2,3&loan_purposes=1"
+  ],
+  "state": "CA",
+  "years": "2022,2023,2024",
+  "filters": {
+    "actions_taken": "1,2,3",
+    "loan_purposes": "1",
+    "local_post_filter_lien_status": "1 when column is present",
+    "local_post_filter_occupancy_type": "1 when column is present"
+  },
+  "rows": 850278,
+  "columns": [
+    "activity_year",
+    "state_code",
+    "action_taken",
+    "loan_type",
+    "loan_purpose",
+    "lien_status",
+    "occupancy_type",
+    "loan_amount",
+    "income",
+    "debt_to_income_ratio",
+    "loan_to_value_ratio",
+    "property_value",
+    "interest_rate",
+    "rate_spread",
+    "total_loan_costs",
+    "age_group",
+    "race_group",
+    "ethnicity_group",
+    "sex_group",
+    "ffiec_msa_md_median_family_income",
+    "tract_minority_share",
+    "tract_income_ratio",
+    "tract_population",
+    "county_code",
+    "census_tract",
+    "lei",
+    "outcome_group",
+    "target_denied"
+  ],
+  "target": {
+    "name": "target_denied",
+    "positive_class": "Denied",
+    "negative_class": "Originated or approved but not accepted"
+  },
+  "parquet_written": false
+}
