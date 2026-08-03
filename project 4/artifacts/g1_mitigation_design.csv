@@ -1,0 +1,3 @@
+mitigation,category,mechanism,hypothesis
+1. Remove tract_minority_share,Data/feature intervention,"Drop the single strongest race-proxy feature (identified in [I2], permutation importance 0.102, far above any other feature) and retrain the model from scratch without it","If the model's disparity comes mainly from this one proxy, removing it should meaningfully shrink the FPR gap"
+2. Group-specific threshold (equalized odds post-processing),Decision intervention,Keep the same trained model; raise the decision threshold specifically for Black and American Indian/Alaska Native applicants until their FPR matches the White group's baseline FPR (15.5%),Directly targeting the FPR metric at the decision layer should close the gap regardless of what's driving it in the features
